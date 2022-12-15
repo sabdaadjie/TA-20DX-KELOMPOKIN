@@ -17,6 +17,7 @@
 			<label>Harga</label>
 			<input type="text" class="form-control" name="harga" value="">
 		</div>
+
 	</div>
 	<div class="card-footer">
 		<input type="submit" class="btn btn-primary" name="simpan" value="Simpan Data">

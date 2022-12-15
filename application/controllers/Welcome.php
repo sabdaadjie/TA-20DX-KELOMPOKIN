@@ -19,11 +19,11 @@ class Welcome extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	
-	$data = [
-		'judul' =>"Dashboard",
-		'subjudul' =>"Dashboard"
-	];
-	$this->template->load('pages/index','pages/dashboard',$data);
-	
+	{
+		$data = [
+			'judul' =>"Dashboard",
+			'subjudul' =>"Dashboard"
+		];
+		$this->template->load('pages/index','pages/dashboard',$data);
+	}
 }
