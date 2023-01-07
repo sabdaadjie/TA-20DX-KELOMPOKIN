@@ -23,15 +23,22 @@
 					</thead>
 					</tr>
 					<tbody>
-						<?php $Id_DetailTransaksi = 1; ?>
+						<?php $Id_Detailtrans = 1; ?>
 						<?php foreach ($datadetailtransaksi as $key) {
 						?>
 							<tr>
-	
+								<td><?= $Id_Detailtrans++; ?></td>
+								<td><?php echo $key->Id_Transaksi ?></td>
+								<td><?php echo $key->Kode_Invoice ?></td>
+								<td><?php echo $key->Harga ?></td>
+								<td><?php echo $key->Garansi ?></td>
+								<td><?php echo $key->Status_Transaksi ?></td>
+								<td><?php echo $key->Status_Servis ?></td>
+								<td><?php echo $key->Tanggal_Keluar ?></td>
+								<td><?php echo $key->Konfirmasi ?></td>
 								<td>
-									<a href="<?= site_url('detailtransaksi/detail/' . $key->Id_DetailTransaksi) ?>" class="btn btn-primary"><i class="fa fa-list"></i></a>
-									<a href="<?= site_url('detailtransaksi/edit/' . $key->Id_DetailTransaksi) ?>" class="btn btn-success"><i class="fa fa-edit"></i></a>
-									<a href="<?= site_url('detailtransaksi/hapus/' . $key->Id_DetailTransaksi) ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+									<a href="<?= site_url('detailtransaksi/edit/' . $key->Id_Detailtrans) ?>" class="btn btn-success"><i class="fa fa-edit"></i></a>
+									<a href="<?= site_url('detailtransaksi/hapus/' . $key->Id_Detailtrans) ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a>
 								</td>
 							</tr>
 						<?php } ?>
