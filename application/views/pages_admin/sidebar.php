@@ -6,7 +6,9 @@
 				<div class="sidebar-brand-icon rotate-n-15">
 					<!-- Image -->
 				</div>
-				<div class="sidebar-brand-text mx-1">Bestnet Computer</div>
+
+				<img class="btn-circle elevation-3" src="<?= base_url() ?>/assets/img/bestnet.png" alt="AdminLTELogo" height="150" width="150">
+				<div class="sidebar-brand-text mx-1">BESTNET COMPUTER</div>
 			</a>
 
 			<!-- Divider -->
@@ -18,13 +20,23 @@
 					<i class="fas fa-fw fa-home"></i>
 					<span>Dashboard</span></a>
 			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="<?= site_url('pelanggan/add') ?>">
+					<i class="fas fa-fw fa-plus"></i>
+					<span>Tambah Pelanggan</span></a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="<?= site_url('transaksi/add') ?>">
+					<i class="fas fa-fw fa-plus"></i>
+					<span>Tambah Transaksi</span></a>
+			</li>
 
 			<!-- Divider -->
 			<hr class="sidebar-divider">
 
 			<!-- Heading -->
 			<div class="sidebar-heading">
-				Transaksi
+				Pengguna
 			</div>
 
 			<!-- Nav Item - Pages Collapse Menu -->
@@ -35,25 +47,32 @@
 				</a>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" href="<?= site_url('jabatan') ?>">Data Jabatan</a>
-						<a class="collapse-item" href="<?= site_url('user') ?>">Data User</a>
+						<a class="collapse-item" href="<?= site_url('user') ?>">Data Petugas</a>
 						<a class="collapse-item" href="<?= site_url('pelanggan') ?>">Data Pelanggan</a>
 					</div>
 				</div>
 			</li>
 
-			<!-- Nav Item - Utilities Collapse Menu -->
-			<li class="nav-item">
-				<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+			<!-- Heading -->
+			<div class="sidebar-heading">
+				Transaksi
+			</div>
+
+			<li class="nav-item active">
+				<a class="nav-link" href="<?= site_url('transaksi') ?>">
 					<i class="fas fa-fw fa-table"></i>
-					<span>Master Data Transaksi</span>
-				</a>
-				<div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" href="<?= site_url('pricelist') ?>">Data Pricelist Servis</a>
-						<a class="collapse-item" href="<?= site_url('transaksi') ?>">Data Transaksi</a>
-					</div>
-				</div>
+					<span>Data Taransaksi</span></a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="<?= site_url('detailtransaksi') ?>">
+					<i class="fas fa-fw fa-table"></i>
+					<span>Data Detail Transaksi</span></a>
+			</li>
+
+			<li class="nav-item active">
+				<a class="nav-link" href="<?= site_url('pricelist') ?>">
+					<i class="fas fa-fw fa-book"></i>
+					<span>Data Pricelist Servis</span></a>
 			</li>
 
 			<!-- Divider -->
