@@ -20,10 +20,10 @@ class Pelanggan extends CI_Controller
 		$data = [
 			'judul' => 'DATA PELANGGAN',
 			'subjudul' => 'List Data Pelanggan',
-			'datapelanggan' => $this->MPelanggan->tampilData()->result()
+			'datapelanggan' => $this->MPelanggan->tampilData()->result(),
 		];
 		// $this->load->view('v_user', $data);
-		$this->template->load('pages/index', 'dt_pelanggan/v_pelanggan', $data);
+		$this->template->load('pages_admin/index', 'dt_pelanggan/v_pelanggan', $data);
 	}
 
 	// Detail Data
@@ -34,7 +34,7 @@ class Pelanggan extends CI_Controller
 			'subjudul' => 'Detail Data Pelanggan',
 			'datapelanggan' => $this->MPelanggan->detailData($kb)->row()
 		];
-		$this->template->load('pages/index', 'dt_pelanggan/detail_pelanggan', $data);
+		$this->template->load('pages_admin/index', 'dt_pelanggan/detail_pelanggan', $data);
 	}
 
 	// Tambah Data
@@ -58,7 +58,7 @@ class Pelanggan extends CI_Controller
 			'judul' => 'DATA PELANGGAN',
 			'subjudul' => 'Tambah Data Pelanggan'
 		];
-		$this->template->load('pages/index', 'dt_pelanggan/tambah_pelanggan', $data);
+		$this->template->load('pages_admin/index', 'dt_pelanggan/tambah_pelanggan', $data);
 	}
 
 	// Edit Data
@@ -83,7 +83,7 @@ class Pelanggan extends CI_Controller
 			'subjudul' => 'Edit Data Pelanggan',
 			'datapelanggan' => $this->MPelanggan->detailData($kb)->row()
 		];
-		$this->template->load('pages/index', 'dt_pelanggan/edit_pelanggan', $data);
+		$this->template->load('pages_admin/index', 'dt_pelanggan/edit_pelanggan', $data);
 	}
 
 	// Hapus Data

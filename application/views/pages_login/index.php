@@ -58,7 +58,7 @@
 		</div>
 
 		<!--  footer start -->
-	
+		<?php include "v_login.php"; ?>
 		<!-- end footer -->
 
 	</div>

@@ -23,7 +23,7 @@ class Pricelist extends CI_Controller
 			'datapricelist' => $this->MPricelist->tampilData()->result()
 		];
 		// $this->load->view('v_user', $data);
-		$this->template->load('pages/index', 'dt_pricelist/v_pricelist', $data);
+		$this->template->load('pages_admin/index', 'dt_pricelist/v_pricelist', $data);
 	}
 
 	// Detail Data
@@ -34,7 +34,7 @@ class Pricelist extends CI_Controller
 			'subjudul' => 'Detail Data Pricelist',
 			'datapricelist' => $this->MPricelist->detailData($kb)->row()
 		];
-		$this->template->load('pages/index', 'dt_pricelist/detail_pricelist', $data);
+		$this->template->load('pages_admin/index', 'dt_pricelist/detail_pricelist', $data);
 	}
 
 	// Tambah Data
@@ -56,7 +56,7 @@ class Pricelist extends CI_Controller
 			'judul' => 'DATA PRICELIST',
 			'subjudul' => 'Tambah Data Pricelist'
 		];
-		$this->template->load('pages/index', 'dt_pricelist/tambah_pricelist', $data);
+		$this->template->load('pages_admin/index', 'dt_pricelist/tambah_pricelist', $data);
 	}
 
 	// Edit Data
@@ -79,7 +79,7 @@ class Pricelist extends CI_Controller
 			'subjudul' => 'Edit Data Pricelist',
 			'datapricelist' => $this->MPricelist->detailData($kb)->row()
 		];
-		$this->template->load('pages/index', 'dt_pricelist/edit_pricelist', $data);
+		$this->template->load('pages_admin/index', 'dt_pricelist/edit_pricelist', $data);
 	}
 
 	// Hapus Data

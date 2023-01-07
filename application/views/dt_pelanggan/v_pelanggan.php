@@ -5,13 +5,13 @@
 	</div>
 	<div class="card shadow mb-4">
 		<div class="card-body">
-			<a href="<?= site_url('pelanggan/add') ?>" class="btn btn-success">Tambah Data</a>
-			<hr>
+			<!-- <a href="<?= site_url('pelanggan/add') ?>" class="btn btn-success">Tambah Data</a> -->
+			<!-- <hr> -->
 			<div class="table-responsive">
 				<table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
 					<thead>
-						<th>ID Pelanggan</th>
-						<th>Nama Pelanggan</th>
+						<th>No.</th>
+						<th>Jenis Pelanggan</th>
 						<th>Nama</th>
 						<th>No Wa</th>
 						<th>Alamat</th>
@@ -20,10 +20,11 @@
 					</thead>
 					</tr>
 					<tbody>
+						<?php $Id_Pelanggan = 1; ?>
 						<?php foreach ($datapelanggan as $key) {
 						?>
 							<tr>
-								<td><?php echo $key->Id_Pelanggan ?></td>
+								<td><?= $Id_Pelanggan++; ?></td>
 								<td><?php echo $key->Nama_Pelanggan ?></td>
 								<td><?php echo $key->Nama ?></td>
 								<td><?php echo $key->No_Wa ?></td>

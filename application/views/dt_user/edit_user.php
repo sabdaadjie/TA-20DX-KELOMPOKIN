@@ -10,22 +10,24 @@
 		</div>
 		<div class="form-group">
 			<label>UserName</label></label>
-			<input type="text" class="form-control" name="username" value="<?= $datauser->UserName ?>">
+			<input type="text" class="form-control" name="username" value="<?= $datauser->Username ?>">
 		</div>
 		<div class="form-group">
 			<label>Password</label>
-			<input type="text" class="form-control" name="password" value="<?= $datauser->Password ?>">
+			<input type="text" class="form-control" name="password" value="<?= $datauser->Password ?>" disabled>
 		</div>
 		<div class="form-group">
-			<label>Jabatan</label>
-			<select name="id_jabatan" class="form-control">
-				<option value="">-- Pilih Jabatan --</option>
-				<?php foreach ($datajabatan as $key) { ?>
-					<option value="<?= $key->Id_Jabatan ?>" <?php if ($key->Id_Jabatan == $datauser->Id_Jabatan) {
-																echo "selected";
-															} ?>><?= $key->Nama_Jabatan ?></option>
-				<?php } ?>
+			<label for="level">Level</label>
+			<select name="level" id="level" class="form-control">
+				<option value="<?= $datauser->Level; ?>"><?= $datauser->Level ?></option>
+				<option value="Administrator">Administrator</option>
+				<option value="User">User</option>
+				<option value="Teknisi">Teknisi</option>
 			</select>
+		</div>
+		<div class="form-group">
+			<label>Nama</label></label>
+			<input type="text" class="form-control" name="nama" value="<?= $datauser->Nama ?>">
 		</div>
 
 	</div>

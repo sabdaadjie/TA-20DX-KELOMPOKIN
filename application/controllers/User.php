@@ -18,23 +18,23 @@ class User extends CI_Controller
 	public function index()
 	{
 		$data = [
-			'judul' => 'DATA USER',
-			'subjudul' => 'List Data User',
-			'datauser' => $this->MUser->tampilJoinJabatan()->result(),
+			'judul' => 'DATA PETUGAS',
+			'subjudul' => 'List Data Petugas',
+			'datauser' => $this->MUser->tampilData()->result(),
 		];
 		// $this->load->view('v_user', $data);
-		$this->template->load('pages/index', 'dt_user/v_user', $data);
+		$this->template->load('pages_admin/index', 'dt_user/v_user', $data);
 	}
 
 	// Detail Data
 	public function detail($kb)
 	{
 		$data = [
-			'judul' => 'DATA USER',
-			'subjudul' => 'Detail Data User',
+			'judul' => 'DATA PETUGAS',
+			'subjudul' => 'Detail Data Petugas',
 			'datauser' => $this->MUser->detailData($kb)->row()
 		];
-		$this->template->load('pages/index', 'dt_user/detail_user', $data);
+		$this->template->load('pages_admin/index', 'dt_user/detail_user', $data);
 	}
 
 	// Tambah Data
@@ -44,9 +44,10 @@ class User extends CI_Controller
 		if (isset($_POST['simpan'])) {
 			$data = [
 				'Id_User' => $this->input->post('id_user'),
-				'UserName' => $this->input->post('username'),
+				'Username' => $this->input->post('username'),
 				'Password' => $this->input->post('password'),
-				'Id_Jabatan' => $this->input->post('id_jabatan'),
+				'Level' => $this->input->post('level'),
+				'Nama' => $this->input->post('nama'),
 			];
 
 			$this->MUser->addData($data);
@@ -54,11 +55,11 @@ class User extends CI_Controller
 			redirect('user/add');
 		}
 		$data = [
-			'judul' => 'DATA USER',
-			'subjudul' => 'Tambah Data User',
-			'datajabatan' => $this->MUser->tampilJabatan()->result(),
+			'judul' => 'DATA PETUGAS',
+			'subjudul' => 'Tambah Data Petugas',
+			'datauser' => $this->MUser->tampilData()->result(),
 		];
-		$this->template->load('pages/index', 'dt_user/tambah_user', $data);
+		$this->template->load('pages_admin/index', 'dt_user/tambah_user', $data);
 	}
 
 	// Edit Data
@@ -68,8 +69,8 @@ class User extends CI_Controller
 		if (isset($_POST['ubah'])) {
 			$data = [
 				'Username' => $this->input->post('username'),
-				'Password' => $this->input->post('password'),
-				'Id_Jabatan' => $this->input->post('id_jabatan'),
+				'Level' => $this->input->post('level'),
+				'Nama' => $this->input->post('nama'),
 			];
 
 			$this->MUser->editData($kb, $data);
@@ -78,12 +79,11 @@ class User extends CI_Controller
 		}
 
 		$data = [
-			'judul' => 'DATA USER',
-			'subjudul' => 'Edit Data User',
-			'datauser' => $this->MUser->detailData($kb)->row(),
-			'datajabatan' => $this->MUser->tampilJabatan()->result()
+			'judul' => 'DATA PETUGAS',
+			'subjudul' => 'Edit Data Petugas',
+			'datauser' => $this->MUser->detailData($kb)->row()
 		];
-		$this->template->load('pages/index', 'dt_user/edit_user', $data);
+		$this->template->load('pages_admin/index', 'dt_user/edit_user', $data);
 	}
 
 	// Hapus Data
