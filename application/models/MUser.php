@@ -33,21 +33,4 @@ class MUser extends CI_Model
 		return $this->db->delete('tbl_user', ['Id_User' => $kb]);
 		redirect('tbl_user');
 	}
-
-	// Tampil Join Table ID_Jabatan tbl User dengan ID_Jabatan tbl Jabatan
-	public function tampilJoinJabatan()
-	{
-		$this->db->select('*');
-		$this->db->from('tbl_user');
-		$this->db->join('tbl_jabatan', 'tbl_user.Id_Jabatan = tbl_jabatan.Id_Jabatan', 'left');
-		$query = $this->db->get();
-
-		return $query;
-	}
-
-	// Tampil User
-	public function tampilJabatan()
-	{
-		return $this->db->get('tbl_jabatan');
-	}
 }

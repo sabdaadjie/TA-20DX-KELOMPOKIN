@@ -10,7 +10,7 @@
 			<div class="table-responsive">
 				<table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
 					<thead>
-						<th>ID Pricelist</th>
+						<th>No.Id_Price</th>
 						<th>Nama Servis</th>
 						<th>Harga</th>
 						</th>

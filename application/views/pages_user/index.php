@@ -129,8 +129,10 @@
 	</div>
 	<!-- end alamat toko -->
 
-<!-- Contact sesion -->
-<div class="site-section bg-light" id="contact-section">
+
+
+	<!-- Contact sesion -->
+	<div class="site-section bg-light" id="contact-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 text-center mb-5" data-aos="fade-up">
@@ -262,8 +264,6 @@
 	</div>
 	</div>
 	<!-- end about -->
-
-	
 
 	<!--  footer start -->
 	<?php include "footer.php"; ?>

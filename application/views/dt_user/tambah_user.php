@@ -10,21 +10,25 @@
 			<input type="text" class="form-control" name="id_user" value="">
 		</div>
 		<div class="form-group">
-			<label>UserName</label>
+			<label>Username</label>
 			<input type="text" class="form-control" name="username" value="">
 		</div>
 		<div class="form-group">
 			<label>Password</label>
 			<input type="text" class="form-control" name="password" value="">
 		</div>
-		<div class="form-group">
-			<label>ID Jabatan</label>
-			<select name="id_jabatan" class="form-control">
-				<option value="">-- Pilih Jabatan --</option>
-				<?php foreach ($datajabatan as $key) { ?>
-					<option value="<?= $key->Id_Jabatan ?>"><?= $key->Id_Jabatan ?> | <?= $key->Nama_Jabatan ?></option>
-				<?php } ?>
+		<div class="form-grup">
+			<label for="level">Level</label>
+			<select name="level" id="level" class="form-control">
+				<option value="0">-- Pilih Level --</option>
+				<option value="Administrator">Administrator</option>
+				<option value="User">User</option>
+				<option value="Teknisi">Teknisi</option>
 			</select>
+		</div>
+		<div class="form-group">
+			<label>Nama</label>
+			<input type="text" class="form-control" name="nama" value="">
 		</div>
 
 	</div>
