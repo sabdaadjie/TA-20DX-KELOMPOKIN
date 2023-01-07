@@ -9,23 +9,23 @@
 				<table class="table table-striped table-bordered">
 					<tr>
 						<td>ID Pelanggan</td>
-						<td>: <?= $datapelanggan->Id_Pelanggan ?></td>
+					
 					</tr>
 					<tr>
 						<td>Nama_Pelanggan</td>
-						<td>: <?= $datapelanggan->Nama_Pelanggan ?></td>
+						
 					</tr>
 					<tr>
 						<td>Nama</td>
-						<td>: <?= $datapelanggan->Nama ?></td>
+					
 					</tr>
 					<tr>
 						<td>No Wa</td>
-						<td>: <?= $datapelanggan->No_Wa ?></td>
+						
 					</tr>
 					<tr>
 						<td>Alamat</td>
-						<td>: <?= $datapelanggan->Alamat ?></td>
+						
 					</tr>
 				</table>
 			</div>
