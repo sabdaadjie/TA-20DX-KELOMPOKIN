@@ -50,4 +50,31 @@ class MDetailtransaksi extends CI_Model
 	{
 		return $this->db->get('tbl_transaksi');
 	}
+
+	// Tampil Data Cetak Laporan
+	public function tampilDetailtransaksi()
+	{
+		$this->db->select('Id_Detailtrans,Kode_Invoice,Nama,No_Wa,Alamat,Tipe,Model,Kelengkapan,Kendala,Garansi,Harga,Status_Transaksi,Status_Servis,Tanggal_Masuk,Tanggal_Keluar');
+		$this->db->from('tbl_transaksi');
+		$this->db->join('tbl_detailtransaksi', 'tbl_transaksi.Id_Transaksi = tbl_detailtransaksi.Id_Transaksi');
+		$this->db->join(
+			'tbl_pelanggan',
+			'tbl_transaksi.Id_Pelanggan = tbl_pelanggan.Id_Pelanggan'
+		);
+		$query = $this->db->get();
+
+		return $query;
+	}
+
+	// Tampil Data Cetak Nota
+	public function tampilDetailnota($kb)
+	{
+		$this->db->select('*');
+		$this->db->join('tbl_detailtransaksi', 'tbl_transaksi.Id_Transaksi = tbl_detailtransaksi.Id_Transaksi');
+		$this->db->join(
+			'tbl_pelanggan',
+			'tbl_transaksi.Id_Pelanggan = tbl_pelanggan.Id_Pelanggan'
+		);
+		return $this->db->get_where('tbl_transaksi', ['tbl_transaksi.Id_Transaksi' => $kb]);
+	}
 }

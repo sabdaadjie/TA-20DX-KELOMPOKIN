@@ -103,4 +103,15 @@ class Transaksi extends CI_Controller
 		$this->MTransaksi->deleteData($kb);
 		redirect('transaksi');
 	}
+
+	// cetak Nota
+	public function cetakNota($kb)
+	{
+		$data = [
+			'judul' => 'PRINT DETAIL TRANSAKSI',
+			'subjudul' => 'Print Data Transaksi',
+			'datadetailtransaksi' => $this->MTransaksi->tampilDetailnota($kb)->row()
+		];
+		$this->load->view('dt_transaksi/report_nota', $data);
+	}
 }

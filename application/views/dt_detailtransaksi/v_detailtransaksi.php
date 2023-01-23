@@ -41,7 +41,7 @@
 								<td><?php echo $key->Konfirmasi ?></td>
 								<td>
 									<a href="<?= site_url('detailtransaksi/cetakTandaterima/' . $key->Id_Detailtrans) ?>" target="_blank" class="btn btn-warning"><i class="fa fa-book"></i></a>
-									<a href="<?= site_url('detailtransaksi/cetakNota/' . $key->Id_Detailtrans) ?>" target="_blank" class="btn btn-success"><i class="fa fa-print"></i></a>
+									<a href="<?= site_url('detailtransaksi/cetakLaporan/' . $key->Id_Detailtrans) ?>" target="_blank" class="btn btn-success"><i class="fa fa-print"></i></a>
 									<a href="<?= site_url('detailtransaksi/edit/' . $key->Id_Detailtrans) ?>" class="btn btn-primary"><i class="fa fa-edit"></i></a>
 									<a href="<?= site_url('detailtransaksi/hapus/' . $key->Id_Detailtrans) ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a>
 								</td>

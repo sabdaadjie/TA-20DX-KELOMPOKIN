@@ -67,4 +67,16 @@ class MTransaksi extends CI_Model
 	{
 		return $this->db->get('tbl_pelanggan');
 	}
+
+	// Tampil Data Cetak Nota
+	public function tampilDetailnota($kb)
+	{
+		$this->db->select('*');
+		$this->db->join('tbl_detailtransaksi', 'tbl_transaksi.Id_Transaksi = tbl_detailtransaksi.Id_Transaksi');
+		$this->db->join(
+			'tbl_pelanggan',
+			'tbl_transaksi.Id_Pelanggan = tbl_pelanggan.Id_Pelanggan'
+		);
+		return $this->db->get_where('tbl_transaksi', ['tbl_transaksi.Id_Transaksi' => $kb]);
+	}
 }

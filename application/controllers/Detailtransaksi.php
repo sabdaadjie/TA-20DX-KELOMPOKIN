@@ -101,4 +101,38 @@ class Detailtransaksi extends CI_Controller
 		$this->MDetailtransaksi->deleteData($kb);
 		redirect('detailtransaksi');
 	}
+
+	// cetak Nota
+	public function cetakNota($kb)
+	{
+		$data = [
+			'judul' => 'PRINT DETAIL TRANSAKSI',
+			'subjudul' => 'Print Data Transaksi',
+			'datadetailtransaksi' => $this->MDetailtransaksi->tampilDetailnota($kb)->row()
+		];
+		$this->load->view('dt_detailtransaksi/report_nota', $data);
+	}
+
+	// cetak Nota
+	public function cetakTandaterima($kb)
+	{
+		$data = [
+			'judul' => 'PRINT DETAIL TRANSAKSI',
+			'subjudul' => 'Print Data Transaksi',
+			'datadetailtransaksi' => $this->MDetailtransaksi->tampilDetailnota($kb)->row()
+		];
+		$this->load->view('dt_detailtransaksi/report_tandaterima', $data);
+	}
+
+	// Cetak Laporan
+	public function cetakLaporan()
+	{
+		$data = [
+			'judul' => 'CETAK DATA TRANSAKSI',
+			'subjudul' => 'Cetak Data Transaksi',
+			'datadetailtransaksi' => $this->MDetailtransaksi->tampilDetailtransaksi()->result()
+		];
+		// $this->load->view('v_user', $data);
+		$this->load->view('dt_detailtransaksi/report_laporan', $data);
+	}
 }
