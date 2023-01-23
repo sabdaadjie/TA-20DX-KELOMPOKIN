@@ -35,6 +35,7 @@
 								<td><?php echo $key->Kelengkapan ?></td>
 								<td><?php echo $key->Kendala ?></td>
 								<td>
+									<a href="<?= site_url('transaksi/cetakNota/' . $key->Id_Transaksi) ?>" target="_blank" class="btn btn-warning"><i class="fa fa-print"></i></a>
 									<a href="<?= site_url('transaksi/edit/' . $key->Id_Transaksi) ?>" class="btn btn-success"><i class="fa fa-edit"></i></a>
 									<a href="<?= site_url('transaksi/hapus/' . $key->Id_Transaksi) ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a>
 								</td>
